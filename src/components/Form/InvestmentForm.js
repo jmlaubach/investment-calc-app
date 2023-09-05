@@ -61,7 +61,7 @@ function InvestmentForm(props) {
         <button className="buttonAlt" onClick={resetHandler}>
         Reset
         </button>
-        <button type="submit" className="button">
+        <button type="submit" className="button" onSubmit={calculateHandler}>
         Calculate
         </button>
       </p>
