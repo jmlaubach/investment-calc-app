@@ -1,6 +1,4 @@
-import TableRow from "./TableRow";
-
-function ResultTable() {
+function ResultTable(props) {
 
   return (
     <table className="result">
@@ -13,7 +11,17 @@ function ResultTable() {
           <th>Invested Capital</th>
         </tr>
       </thead>
-      <TableRow />
+      <tbody>
+      {props.rows.map((item, index) => (
+        <tr key={index}>
+          <td>{item.year}</td>
+          <td>{item.totalSavings}</td>
+          <td>{item.interestForYear}</td>
+          <td>{item.totalInterest}</td>
+          <td>{item.investedCapital}</td>
+        </tr>
+      ))}
+    </tbody>
     </table>
   );
 }
