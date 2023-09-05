@@ -29,7 +29,6 @@ function InvestmentForm(props) {
         investedCapital: vestedCapital,
       });
     }
-
     props.onSaveInvestmentData(yearlyData)
   };
     

@@ -14,7 +14,7 @@ const START_DATA = [
 ];
 
 function App() {
-  const [isFormReset, setIsFormReset] = useState(true);
+  const [isFormReset, setIsFormReset] = useState(false);
   const [investmentData, setInvestmentData] = useState(START_DATA);
 
   const resetFormHandler = () => {
@@ -27,7 +27,7 @@ function App() {
       ...yearlyData,
       id: Math.random().toString(),
     };
-    setInvestmentData = data;
+    setInvestmentData(data);
   }
 
   return (

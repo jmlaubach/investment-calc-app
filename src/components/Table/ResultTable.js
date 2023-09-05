@@ -1,5 +1,7 @@
 function ResultTable(props) {
 
+  const investingData = props.rows;
+
   return (
     <table className="result">
       <thead>
